@@ -1,0 +1,508 @@
+# Grundlegende Schreib- und Formatierungssyntax
+
+Erstellen Sie anspruchsvolle Formatierungen für Ihre Prose und Ihren Code auf GitHub mit einfacher Syntax.
+
+## Überschriften
+
+Um eine Überschrift zu erstellen, fügen Sie vor dem Überschriftentext ein bis sechs <kbd>#</kbd> Symbole hinzu. Die Anzahl der <kbd>#</kbd> verwendeten Elemente bestimmt die Hierarchieebene und die Schriftgröße der Überschrift.
+
+```markdown
+# A first-level heading
+## A second-level heading
+### A third-level heading
+```
+
+![Screenshot von gerenderten GitHub Markdown mit Beispiel-H1-, h2- und h3-Kopfzeilen, die in absteigender Typgröße und visueller Gewichtung zum Anzeigen der Hierarchieebene absteigen.](/assets/images/help/writing/headings-rendered.png)
+
+Wenn Sie zwei oder mehr Überschriften verwenden, generiert GitHub automatisch ein Inhaltsverzeichnis, auf das Sie zugreifen können, indem Sie in der Dateiüberschrift auf das Menüsymbol <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-list-unordered" aria-label="Table of Contents" role="img"><path d="M5.75 2.5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1-6a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM2 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> "Gliederung" klicken. Jeder Überschriftentitel wird im Inhaltsverzeichnis aufgelistet, und Sie können auf einen Titel klicken, um zum ausgewählten Abschnitt zu navigieren.
+
+![Screenshot einer README-Datei mit dem Dropdown-Menü, aus dem das Inhaltsverzeichnis eingeblendet wird. Das Inhaltsverzeichnissymbol ist in dunkel orange umrissen.](/assets/images/help/repository/headings-toc.png)
+
+## Formatieren von Text
+
+Sie können die Hervorhebung mit fett, kursiv, durchgestrichenem, tiefgestelltem oder hochgestelltem Text in Kommentarfeldern und `.md` Dateien angeben.
+
+| Stil                                                                                    | Syntax                                            | Tastaturkurzbefehl                       | Example                                 | Output                                        |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------- | --------------------------------------- | --------------------------------------------- |
+| Bold                                                                                    |                                                   |                                          |                                         |                                               |
+| `** **` oder `__ __`                                                                    |                                                   |                                          |                                         |                                               |
+| <kbd>Command</kbd>+<kbd>B</kbd> (Mac) oder <kbd>Ctrl</kbd>+<kbd>B</kbd> (Windows/Linux) | `**This is bold text**`                           |                                          |                                         |                                               |
+| **Dies ist fett formatierter Text.**                                                    |                                                   |                                          |                                         |                                               |
+| Kursiv                                                                                  |                                                   |                                          |                                         |                                               |
+| `* *` oder `_ _`                                                                        |                                                   |                                          |                                         |                                               |
+| <kbd>Command</kbd>+<kbd>I</kbd> (Mac) oder <kbd>Ctrl</kbd>+<kbd>I</kbd> (Windows/Linux) | `_This text is italicized_`                       |                                          |                                         |                                               |
+| *Dieser Text kursiv formatiert*                                                         |                                                   |                                          |                                         |                                               |
+| Durchgestrichen                                                                         |                                                   |                                          |                                         |                                               |
+| `~~ ~~` oder `~ ~`                                                                      | Nichts                                            | `~~This was mistaken text~~`             |                                         |                                               |
+| ~~Dieser Text war falsch.~~                                                             |                                                   |                                          |                                         |                                               |
+| Fett und geschachtelt kursiv formatiert                                                 |                                                   |                                          |                                         |                                               |
+| `** **` und `_ _`                                                                       | Nichts                                            | `**This text is _extremely_ important**` |                                         |                                               |
+| **Dieser Text ist *äußerst* wichtig.**                                                  |                                                   |                                          |                                         |                                               |
+| Alles fett und kursiv                                                                   | `*** ***`                                         | Nichts                                   | `***All this text is important***`      |                                               |
+| ***Dieser Gesamte Text ist wichtig.***                                                  | <!-- markdownlint-disable-line emphasis-style --> |                                          |                                         |                                               |
+| Tiefgestellt                                                                            | `<sub> </sub>`                                    | Nichts                                   | `This is a <sub>subscript</sub> text`   | Dies ist ein <sub>tiefgestellter</sub> Text.  |
+| Hochgestellt                                                                            | `<sup> </sup>`                                    | Nichts                                   | `This is a <sup>superscript</sup> text` | Dies ist ein <sup>hochgestellter</sup> Text.  |
+| Unterstreichen                                                                          | `<ins> </ins>`                                    | Nichts                                   | `This is an <ins>underlined</ins> text` | Dies ist ein <ins>unterstrichener</ins> Text. |
+
+## Zitieren von Text
+
+Sie können Text mit einer Anführungszeichen anführungszeichen <kbd>></kbd>.
+
+```markdown
+Text that is not a quote
+
+> Text that is a quote
+```
+
+Zitierter Text wird mit einer vertikalen Linie auf der linken Seite eingezogen und mit grauem Typ angezeigt.
+
+![Screenshot des gerenderten GitHub Markdown mit dem Unterschied zwischen normalem und zitierten Text.](/assets/images/help/writing/quoted-text-rendered.png)
+
+> [!NOTE]
+> Wenn Sie eine Unterhaltung anzeigen, können Sie Text in einem Kommentar automatisch zitieren, indem Sie den Text hervorheben und dann <kbd>R</kbd> eingeben. Sie können einen ganzen Kommentar zitieren, indem Sie auf "<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-kebab-horizontal" aria-label="The horizontal kebab icon" role="img"><path d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path></svg> klicken\*\*\*\*. Weitere Informationen zu Tastenkombinationen finden Sie unter [Tastenkombinationen](/de/get-started/accessibility/keyboard-shortcuts).
+
+## Code zitieren
+
+Sie können Code oder einen Befehl innerhalb eines Satzes mit einzelnen Backticks hervorheben. Der Text innerhalb der Backticks wird nicht formatiert dargestellt. Sie können auch die <kbd>Command</kbd>+<kbd>E</kbd> (Mac) oder <kbd>Ctrl drücken.</kbd>+<kbd>E</kbd> (Windows/Linux) Tastenkombination zum Einfügen der Backticks für einen Codeblock in einer Zeile von Markdown.
+
+```markdown
+Use `git status` to list all new or modified files that haven't yet been committed.
+```
+
+![Screenshot des gerenderten GitHub Markdown, der zeigt, dass Zeichen, die von Backticks umgeben sind, in einer Schriftart mit fester Breite angezeigt werden, die in Hellgrau hervorgehoben ist.](/assets/images/help/writing/inline-code-rendered.png)
+
+Verwenden Sie dreifache Backticks, um Code oder Text in einen eigenen eindeutigen Block zu formatieren.
+
+````markdown
+Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
+````
+
+![Screenshot des gerenderten GitHub Markdown mit einem einfachen Codeblock ohne Syntaxmarkierung.](/assets/images/help/writing/code-block-rendered.png)
+
+Weitere Informationen finden Sie unter [Code-Blöcke erstellen und markieren](/de/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks).
+
+Wenn du häufig Codeausschnitte und Tabellen bearbeitest, profitierst du möglicherweise von einer Schriftart mit fester Breite in allen Kommentarfeldern auf GitHub. Weitere Informationen finden Sie unter [Informationen zum Schreiben und Formatieren auf GitHub](/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github#enabling-fixed-width-fonts-in-the-editor).
+
+## Unterstützte Farbmodelle
+
+Bei Problemen, Pullanfragen und Diskussionen können Sie Farben innerhalb eines Satzes mithilfe von Backticks aufrufen. Ein unterstütztes Farbmodell in Backticks zeigt eine Visualisierung der Farbe an.
+
+```markdown
+The background color is `#ffffff` for light mode and `#000000` for dark mode.
+```
+
+![Screenshot des gerenderten GitHub Markdown, der zeigt, wie HEX-Werte innerhalb von Backticks kleine Farbkreise erzeugen, hier weiß und dann schwarz.](/assets/images/help/writing/supported-color-models-rendered.png)
+
+Hier sind die derzeit unterstützten Farbmodelle.
+
+| Farbe       | Syntax                      | Example                             | Output                                                                                                                                                                                               |
+| ----------- | --------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hexadezimal | <code>\`#RRGGBB\`</code>    | <code>\`#0969DA\`</code>            | ![Screenshot des gerenderten GitHub Markdown, der zeigt, wie HEX-Wert #0969DA mit einem blauen Kreis angezeigt wird.](/assets/images/help/writing/supported-color-models-hex-rendered.png)           |
+| RGB         | <code>\`rgb(R,G,B)\`</code> | <code>\`rgb(9, 105, 218)\`</code>   | ![Screenshot des gerenderten GitHub Markdown, der zeigt, wie RGB-Wert 9, 105, 218 mit einem blauen Kreis angezeigt wird.](/assets/images/help/writing/supported-color-models-rgb-rendered.png)       |
+| HSL         | <code>\`hsl(H,S,L)\`</code> | <code>\`hsl(212, 92%, 45%)\`</code> | ![Screenshot des gerenderten GitHub Markdown, der zeigt, wie der HSL-Wert 212, 92%, 45% mit einem blauen Kreis angezeigt wird.](/assets/images/help/writing/supported-color-models-hsl-rendered.png) |
+
+> [!NOTE]
+>
+> * Ein unterstütztes Farbmodell darf innerhalb der Backticks keine vor- und nachgestellten Leerzeichen haben.
+> * Die Visualisierung der Farbe wird nur bei Problemen, Pullanforderungen und Diskussionen unterstützt.
+
+## Links
+
+Sie können einen Inlinelink erstellen, indem Sie Linktext in eckige Klammern umschließen `[ ]`und dann die URL in Klammern umschließen `( )`. Sie können auch den <kbd>Tastenkombinationsbefehl</kbd>+<kbd>K</kbd> verwenden, um einen Link zu erstellen. Wenn Sie Text ausgewählt haben, können Sie eine URL aus der Zwischenablage einfügen, um automatisch einen Link aus der Auswahl zu erstellen.
+
+Sie können auch einen Markdown-Link erstellen, indem Sie den Text hervorheben und die Tastenkombination <kbd>Befehl</kbd>+<kbd>V</kbd> verwenden. Wenn Sie den Text durch den Link ersetzen möchten, verwenden Sie die Tastenkombination <kbd>Befehl</kbd>+<kbd>UMSCHALT</kbd>+<kbd>V</kbd>.
+
+`This site was built using [GitHub Pages](https://pages.github.com/).`
+
+![Screenshot des gerenderten GitHub Markdown, der zeigt, wie Text in eckigen Klammern ,GitHub Seiten" als blauer Link angezeigt wird.](/assets/images/help/writing/link-rendered.png)
+
+> [!NOTE]
+> GitHub Erstellt automatisch Verknüpfungen, wenn gültige URLs in einem Kommentar geschrieben werden. Weitere Informationen finden Sie unter [Automatisch verlinkte Verweise und URLs](/de/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls).
+
+## Abschnittslinks
+
+Sie können direkt eine Verknüpfung mit jedem Abschnitt mit einer Überschrift vornehmen. Um den automatisch generierten Anker in einer gerenderten Datei anzuzeigen, zeigen Sie mit der Maus auf die Abschnittsüberschrift, um das <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-link" aria-label="the link" role="img"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>-Symbol verfügbar zu machen, und klicken Sie auf das Symbol, um den Anker in Ihrem Browser anzuzeigen.
+
+![Screenshot einer Infodatei für ein Repository. Links neben einer Abschnittsüberschrift ist ein Linksymbol dunkelorange umrandet.](/assets/images/help/repository/readme-links.png)
+
+Wenn Sie den Anker für eine Überschrift in einer Datei ermitteln müssen, die Sie bearbeiten, können Sie die folgenden Grundlegenden Regeln verwenden:
+
+* Buchstaben werden in Kleinbuchstaben konvertiert.
+* Leerzeichen werden durch Bindestriche (`-`) ersetzt. Alle anderen Leerzeichen oder Satzzeichen werden entfernt.
+* Führende und nachfolgende Leerzeichen werden entfernt.
+* Markupformatierung wird entfernt, sodass nur der Inhalt (z. B `_italics_` . wird `italics`).
+* Wenn der automatisch generierte Anker für eine Überschrift mit einem früheren Anker im selben Dokument identisch ist, wird ein eindeutiger Bezeichner durch Anfügen eines Bindestrichs und einer automatisch erhöhten ganzzahligen Zahl generiert.
+
+Ausführlichere Informationen zu den Anforderungen von URI-Fragmenten finden Sie unter [RFC 3986: Uniform Resource Identifier (URI): Generische Syntax, Abschnitt 3.5](https://www.rfc-editor.org/rfc/rfc3986#section-3.5).
+
+Der folgende Codeblock veranschaulicht die grundlegenden Regeln, die zum Generieren von Ankern aus Überschriften in gerenderten Inhalten verwendet werden.
+
+```markdown
+# Example headings
+
+## Sample Section
+
+## This'll be a _Helpful_ Section About the Greek Letter Θ!
+A heading containing characters not allowed in fragments, UTF-8 characters, two consecutive spaces between the first and second words, and formatting.
+
+## This heading is not unique in the file
+
+TEXT 1
+
+## This heading is not unique in the file
+
+TEXT 2
+
+# Links to the example headings above
+
+Link to the sample section: [Link Text](#sample-section).
+
+Link to the helpful section: [Link Text](#thisll-be-a-helpful-section-about-the-greek-letter-Θ).
+
+Link to the first non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file).
+
+Link to the second non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file-1).
+```
+
+> [!NOTE]
+> Wenn Sie eine Überschrift bearbeiten oder die Reihenfolge von Überschriften mit "identischen" Ankern ändern, müssen Sie auch links zu diesen Überschriften aktualisieren, da sich die Anker ändern.
+
+## Relative Verknüpfungen
+
+Du kannst relative Links und Bildpfade in deinen gerenderten Dateien definieren, um Leser dabei zu unterstützen, in deinem Repository zu anderen Dateien zu navigieren.
+
+Ein relativer Link ist ein Verknüpfung, die relativ zur aktuellen Datei ist. Wenn sich beispielsweise eine README-Datei im Root deines Repositorys und eine andere Datei in *docs/CONTRIBUTING.md* befindet, sieht der relative Link zu *CONTRIBUTING.md* in deiner README-Datei wie folgt aus:
+
+```text
+[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+```
+
+GitHub wandelt deinen relativen Link oder Bildpfad automatisch anhand dessen um, in welchem Branch du dich gerade befindest, damit der Link oder der Pfad immer funktioniert. Der Pfad des Links ist relativ zur aktuellen Datei. Links, die mit `/` beginnen, sind relativ zum Repositorystamm. Du kannst alle relativen Linkoperanden verwenden, z. B. `./` und `../`.
+
+Ihr Linktext sollte sich in einer einzelnen Zeile befindet. Das folgende Beispiel funktioniert nicht.
+
+```markdown
+[Contribution
+guidelines for this project](docs/CONTRIBUTING.md)
+```
+
+Relative Links sind für Benutzer, die dein Repository klonen, einfacher zu verwenden. Absolute Links funktionieren möglicherweise nicht in Klons deines Repositorys - wir empfehlen relative Links zu verwenden, um auf andere Dateien in deinem Repository zu verweisen.
+
+## Benutzerdefinierte Anker
+
+Sie können standardmäßige HTML-Ankertags (`<a name="unique-anchor-name"></a>`) verwenden, um Navigationsankerpunkte für eine beliebige Position im Dokument zu erstellen. Um mehrdeutige Verweise zu vermeiden, verwenden Sie ein eindeutiges Benennungsschema für Ankertags, z. B. das Hinzufügen eines Präfixes zum `name` Attributwert.
+
+> [!NOTE]
+> Benutzerdefinierte Anker werden nicht in der Dokumentgliederung/inhaltsverzeichnis enthalten sein.
+
+Sie können eine Verknüpfung mit einem benutzerdefinierten Anker herstellen, indem Sie den Wert des Attributs verwenden, das `name` Sie dem Anker gegeben haben. Die Syntax entspricht genau dem, wenn Sie eine Verknüpfung mit einem Anker herstellen, der automatisch für eine Überschrift generiert wird.
+
+Beispiel:
+
+```markdown
+# Section Heading
+
+Some body text of this section.
+
+<a name="my-custom-anchor-point"></a>
+Some text I want to provide a direct link to, but which doesn't have its own heading.
+
+(… more content…)
+
+[A link to that custom anchor](#my-custom-anchor-point)
+```
+
+> [!TIP]
+> Benutzerdefinierte Anker werden nicht vom automatischen Benennungs- und Nummerierungsverhalten automatischer Überschriftenlinks berücksichtigt.
+
+## Zeilenumbrüche
+
+Wenn Sie probleme, Pullanforderungen oder Diskussionen in einem Repository schreiben, GitHub wird automatisch ein Zeilenumbruch gerendert:
+
+```markdown
+This example
+Will span two lines
+```
+
+Wenn Sie jedoch in einer MD-Datei schreiben, würde das obige Beispiel in einer Zeile ohne Zeilenumbruch gerendert. Um einen Zeilenumbruch in einer MD-Datei zu erstellen, müssen Sie einen der folgenden Elemente einschließen:
+
+* Schließen Sie am Ende der ersten Zeile zwei Leerzeichen ein.
+  <pre>
+  This example&nbsp;&nbsp;
+  Will span two lines
+  </pre>
+
+* Schließen Sie einen Backslash am Ende der ersten Zeile ein.
+
+  ```markdown
+  This example\
+  Will span two lines
+  ```
+
+* Fügen Sie am Ende der ersten Zeile ein HTML-Zeilenumbruch-Tag hinzu.
+
+  ```markdown
+  This example<br/>
+  Will span two lines
+  ```
+
+Wenn Sie eine leere Zeile zwischen zwei Zeilen lassen, werden sowohl .md-Dateien als auch Markdown in Issues, Pull-Anfragen und Diskussionen die beiden Zeilen getrennt durch die leere Zeile dargestellt.
+
+```markdown
+This example
+
+Will have a blank line separating both lines
+```
+
+## Bilder
+
+Sie können ein Bild anzeigen, indem Sie <kbd>es hinzufügen!</kbd> und umschließen des Alternativtexts in `[ ]`. Alternativtext ist eine kurze Textentsprechung der Informationen im Bild. Umschließen Sie dann den Link für das Bild in Klammern `()`.
+
+`![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)`
+
+![Screenshot eines Kommentars zu einem GitHub Problem mit einem Bild, das im Markdown hinzugefügt wurde, eines Octokats, der lächelnd und einen Zeltnakel aufhebt.](/assets/images/help/writing/image-rendered.png)
+
+GitHub unterstützt das Einbetten von Bildern in Ihre Probleme, Pullanfragen, Diskussionen, Kommentare und `.md` Dateien. Sie können ein Bild aus Ihrem Repository anzeigen, einen Link zu einem Onlinebild hinzufügen oder ein Bild hochladen. Weitere Informationen finden Sie unter ["Hochladen von Ressourcen"](#uploading-assets).
+
+> [!NOTE]
+> Wenn Sie ein Bild anzeigen möchten, das sich in Ihrem Repository befindet, verwenden Sie relative Links anstelle absoluter Links.
+
+Hier sind einige Beispiele für die Verwendung relativer Links zum Anzeigen eines Bilds.
+
+| Kontext                                                                           | Relative Verknüpfung                                                   |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| In einer `.md` Datei in derselben Verzweigung                                     | `/assets/images/electrocat.png`                                        |
+| In einer Datei in einer `.md` anderen Verzweigung                                 | `/../main/assets/images/electrocat.png`                                |
+| Bei Problemen, Pull-Anfragen und Kommentaren des Repositorys                      | `../blob/main/assets/images/electrocat.png?raw=true`                   |
+| In einer Datei in einem `.md` anderen Repository                                  | `/../../../../github/docs/blob/main/assets/images/electrocat.png`      |
+| Bei Problemen rufen Sie Anforderungen und Kommentare eines anderen Repositorys ab | `../../../github/docs/blob/main/assets/images/electrocat.png?raw=true` |
+
+> [!NOTE]
+> Die letzten beiden relativen Links in der obigen Tabelle funktionieren nur für Bilder in einem privaten Repository, wenn der Betrachter mindestens Lesezugriff auf das private Repository hat, das diese Bilder enthält.
+
+Weitere Informationen finden Sie unter ["Relative Links](#relative-links)".
+
+### Das Bild-Element
+
+Das `<picture>` HTML-Element wird unterstützt.
+
+## Lists
+
+Sie können eine ungeordnete Liste erstellen, indem Sie eine oder mehrere Textzeilen mit <kbd>-</kbd>, oder <kbd>\*</kbd><kbd>+</kbd>.
+
+```markdown
+- George Washington
+* John Adams
++ Thomas Jefferson
+```
+
+![Screenshot der gerenderten GitHub Markdown mit einer Aufzählung der Namen der ersten drei amerikanischen Präsidenten.](/assets/images/help/writing/unordered-list-rendered.png)
+
+Um Ihre Liste zu sortieren, stellen Sie jeder Zeile eine Nummer voran.
+
+```markdown
+1. James Madison
+2. James Monroe
+3. John Quincy Adams
+```
+
+![Screenshot der gerenderten GitHub Markdown mit einer nummerierten Liste der Namen der vierten, fünften und sechsten amerikanischen Präsidenten.](/assets/images/help/writing/ordered-list-rendered.png)
+
+### Geschachtelte Listen
+
+Sie können eine geschachtelte Liste erstellen, indem Sie ein oder mehrere Listenelemente unter einem anderen Element einrücken.
+
+Zum Erstellen einer geschachtelten Liste mithilfe des Web-Editors oder GitHub eines Text-Editors, der eine einfarbige Schriftart verwendet, wie [Visual Studio Code](https://code.visualstudio.com/)z. B. können Sie Ihre Liste visuell ausrichten. Geben Sie Leerzeichen vor dem geschachtelten Listenelement ein, bis sich das Listenmarkierungszeichen (<kbd>-</kbd> oder <kbd>\*</kbd>) direkt unterhalb des ersten Zeichens des Texts im darüber liegenden Element befindet.
+
+```markdown
+1. First list item
+   - First nested list item
+     - Second nested list item
+```
+
+> [!NOTE]
+> Im webbasierten Editor können Sie eine oder mehrere Textzeilen ein- oder herunterstufen, indem Sie zuerst die gewünschten Zeilen hervorheben und dann die TAB<kbd>- oder</kbd><kbd>UMSCHALT-TAB-TASTE</kbd>+<kbd></kbd> verwenden.
+
+![Screenshot von Markdown in Visual Studio Code, der den Einzug von geschachtelten nummerierten Zeilen und Aufzählungspunkten zeigt.](/assets/images/help/writing/nested-list-alignment.png)
+
+![Screenshot des gerenderten GitHub Markdown mit einem nummerierten Element gefolgt von geschachtelten Aufzählungszeichen auf zwei verschiedenen Schachtelungsebenen.](/assets/images/help/writing/nested-list-example-1.png)
+
+Wenn Sie eine geschachtelte Liste im Kommentar-Editor GitHuberstellen möchten, für die keine einfarbige Schriftart verwendet wird, können Sie das Listenelement direkt oberhalb der geschachtelten Liste betrachten und die Anzahl der Zeichen zählen, die vor dem Inhalt des Elements angezeigt werden. Geben Sie dann diese Anzahl von Leerzeichen vor dem geschachtelten Listenelement ein.
+
+In diesem Beispiel können Sie ein geschachteltes Listenelement unter dem Listenelement `100. First list item` hinzufügen, indem Sie das geschachtelte Listenelement mindestens fünf Leerzeichen einrücken, da es vor `100. `fünf Zeichen (`First list item`) gibt.
+
+```markdown
+100. First list item
+     - First nested list item
+```
+
+![Screenshot des gerenderten GitHub Markdown mit einem nummerierten Element, das von der Zahl 100 gefolgt von einem aufzählungszeichen geschachtelten Element eine Ebene enthält.](/assets/images/help/writing/nested-list-example-3.png)
+
+Sie können mehrere Ebenen geschachtelter Listen mit derselben Methode erstellen. Da beispielsweise das erste geschachtelte Listenelement sieben Zeichen () vor dem geschachtelten Listeninhalt `␣␣␣␣␣-␣`enthält, müssen Sie das zweite geschachtelte Listenelement um mindestens zwei weitere Zeichen einrücken`First nested list item` (mindestens neun Leerzeichen).
+
+```markdown
+100. First list item
+     - First nested list item
+       - Second nested list item
+```
+
+![Screenshot der gerenderten GitHub Markdown mit einem nummerierten Element, das von der Zahl 100 gefolgt von Aufzählungszeichen auf zwei verschiedenen Schachtelungsebenen vorgestrichen ist.](/assets/images/help/writing/nested-list-example-2.png)
+
+Weitere Beispiele finden Sie unter [GitHub Flavored Markdown Spec](https://github.github.com/gfm/#example-265).
+
+## Aufgabenlisten
+
+Um eine Aufgabenliste zu erstellen, stellst du den Listenelementen einen Bindestrich und ein Leerzeichen gefolgt von `[ ]` voran. Um eine Aufgabe als erledigt zu markieren, verwende `[x]`.
+
+```markdown
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
+```
+
+![Screenshot: Gerenderte Version des Markdowns. Die Verweise auf Issues werden als Issuetitel gerendert.](/assets/images/help/writing/task-list-rendered-simple.png)
+
+Wenn eine Beschreibung eines Aufgabenlistenelements mit einer Klammer beginnt, müssen Sie sie mit <kbd>\\</kbd>:
+
+`- [ ] \(Optional) Open a followup issue`
+
+Weitere Informationen finden Sie unter [Informationen zu Aufgabenlisten](/de/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists).
+
+## Erwähnen von Personen und Teams
+
+Sie können eine Person oder ein [Team](/de/organizations/organizing-members-into-teams) erwähnen GitHub , indem Sie den Benutzernamen oder den Teamnamen eingeben <kbd>@</kbd> . Dadurch wird eine Benachrichtigung ausgelöst und ihre Aufmerksamkeit auf die Unterhaltung lenken. Personen erhalten auch eine Benachrichtigung, wenn Sie einen Kommentar bearbeiten, um ihren Benutzernamen oder Teamnamen zu erwähnen. Weitere Informationen zu Benachrichtigungen findest du unter [Informationen zu Benachrichtigungen](/de/subscriptions-and-notifications/concepts/about-notifications).
+
+> [!NOTE]
+> Eine Person wird nur über eine Erwähnung benachrichtigt, wenn die Person Lesezugriff auf das Repository hat und, wenn das Repository einer Organisation gehört, die Person mitglied der Organisation ist.
+
+`@github/support What do you think about these updates?`
+
+![Screenshot des gerenderten GitHub Markdown, der zeigt, wie das Team "@github/support" als fett formatierten, klickbaren Text rendert.](/assets/images/help/writing/mention-rendered.png)
+
+Wenn Sie ein übergeordnetes Team erwähnen, erhalten Mitglieder seiner untergeordneten Teams ebenfalls Benachrichtigungen, was die Kommunikation mit mehreren Personengruppen vereinfacht. Weitere Informationen finden Sie unter [Informationen zu den Organisationsteams](/de/organizations/organizing-members-into-teams/about-teams).
+
+Wenn Sie ein <kbd>@</kbd> Symbol eingeben, wird eine Liste von Personen oder Teams in einem Projekt angezeigt. Die Liste wird während der Eingabe dynamisch gefiltert. Sobald Sie den Namen der gesuchten Person oder des gesuchten Teams gefunden haben, können Sie die Pfeiltasten verwenden, um diesen auszuwählen und entweder die Tabulator- oder die Eingabetaste drücken, um die Eingabe abzuschließen. Geben Sie für Teams die @organization/team-name Unterhaltung ein, und alle Mitglieder dieses Teams werden abonniert.
+
+Die Ergebnisse der Autovervollständigung sind auf Repository-Mitwirkende und weitere Diskussionsteilnehmer beschränkt.
+
+## Verweisen auf Probleme und Pullanforderungen
+
+Sie können eine Liste der vorgeschlagenen Probleme und Pullanforderungen innerhalb des Repositorys durch Eingabe <kbd>#</kbd>aufrufen. Geben Sie das Problem oder die Pullanforderungsnummer oder den Titel ein, um die Liste zu filtern, und drücken Sie dann die TAB-TASTE, oder drücken Sie die EINGABETASTE, um das hervorgehobene Ergebnis abzuschließen.
+
+Weitere Informationen finden Sie unter [Automatisch verlinkte Verweise und URLs](/de/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls).
+
+## Verweisen auf externe Ressourcen
+
+Wenn benutzerdefinierte Autolink-Referenzen für ein Repository konfiguriert sind, werden Verweise auf externe Ressourcen, beispielsweise ein JIRA-Issue oder ein Zendesk-Ticket, in verkürzte Links umgewandelt. Wenn Du wissen möchtest, welche automatische Verknüpfungen in Deinem Repository verfügbar sind, wende Dich an eine Person mit Administratorberechtigungen für das Repository. Weitere Informationen finden Sie unter [Autolinks konfigurieren, um auf externe Ressourcen zu referenzieren](/de/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/configuring-autolinks-to-reference-external-resources).
+
+## Hochladen von Ressourcen
+
+Sie können Objekte wie Bilder hochladen, indem Sie sie ziehen und ablegen, aus einem Dateibrowser auswählen oder einfügen. Sie können Ressourcen in Probleme, Pullanforderungen, Kommentare und `.md` Dateien in Ihrem Repository hochladen.
+
+## Verwenden von Emojis
+
+Sie können Ihrem Schreiben Emojis hinzufügen, indem Sie einen Doppelpunkt gefolgt vom Namen des Emojis eingeben `:EMOJICODE:`.
+
+`@octocat :+1: This PR looks great - it's ready to merge! :shipit:`
+
+![Screenshot der gerenderten GitHub Markdown, der zeigt, wie Emoji-Codes für +1 und shipit visuell als Emoji gerendert werden.](/assets/images/help/writing/emoji-rendered.png)
+
+Eingabe <kbd>:</kbd> wird eine Liste mit vorgeschlagenen Emojis angezeigt. Die Liste wird während der Eingabe gefiltert. Sobald Sie das gesuchte Emoji gefunden haben, drücken Sie die **TAB-TASTE** oder **EINGABETASTE** , um das hervorgehobene Ergebnis abzuschließen.
+
+Eine vollständige Liste der verfügbaren Emojis und Codes finden Sie im [Emoji-Cheat-Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/github-actions-auto-update/README.md).
+
+## Paragraphs
+
+Sie können einen neuen Absatz erstellen, indem Sie eine leere Zeile zwischen Textzeilen verlassen.
+
+## Fußnoten
+
+Sie können Ihren Inhalten Fußnoten hinzufügen, indem Sie diese Klammernsyntax verwenden:
+
+```text
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, add 2 spaces to the end of a line.  
+This is a second line.
+```
+
+Die Fußnote wird wie folgt gerendert:
+
+![Screenshot des gerenderten Markdown mit hochgestellten Ziffern, die zur Angabe von Fußnoten verwendet werden, sowie optionalen Zeilenumbrüchen innerhalb einer Notiz.](/assets/images/help/writing/footnote-rendered.png)
+
+> [!NOTE]
+> Die Position einer Fußnote in Ihrem Markdown beeinflusst nicht, wo die Fußnote gerendert wird. Sie können eine Fußnote direkt nach dem Bezug auf die Fußnote schreiben, und die Fußnote wird weiterhin unten im Markdown gerendert. Fußnoten werden in Wikis nicht unterstützt.
+
+## Alarmsignale
+
+Warnungen, auch als **Legenden** oder **Anzeigen** bezeichnet, sind eine Markdown-Erweiterung basierend auf der Blockquotesyntax, mit der Sie wichtige Informationen hervorheben können.\*\*\*\* Auf GitHub, sie werden mit unverwechselbaren Farben und Symbolen angezeigt, um die Bedeutung des Inhalts anzugeben.
+
+Verwenden Sie Warnungen nur, wenn sie für den Benutzererfolg von entscheidender Bedeutung sind, und beschränken Sie sie auf ein oder zwei pro Artikel, um zu verhindern, dass der Leser überlastet wird. Darüber hinaus sollten Sie vermeiden, Benachrichtigungen aufeinander zu platzieren. Warnungen können nicht in anderen Elementen geschachtelt werden.
+
+Um eine Warnung hinzuzufügen, verwenden Sie eine spezielle Blockquotezeile, die den Warnungstyp angibt, gefolgt von den Warnungsinformationen in einer Standardblockquote. Es stehen fünf Arten von Warnungen zur Verfügung:
+
+```markdown
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+```
+
+Hier sind die gerenderten Warnungen:
+
+![Screenshot von gerenderten Markdown-Warnungen, die zeigen, wie Notiz, Tipp, Wichtig, Warnung und Vorsicht mit unterschiedlich farbigem Text und Symbolen gerendert werden.](/assets/images/help/writing/alerts-rendered.png)
+
+## Ausblenden von Inhalten mit Kommentaren
+
+Sie können feststellen GitHub , dass Inhalte aus dem gerenderten Markdown ausgeblendet werden, indem Sie den Inhalt in einem HTML-Kommentar platzieren.
+
+```text
+<!-- This content will not appear in the rendered Markdown -->
+```
+
+## Ignorieren der Markdown-Formatierung
+
+Sie können die GitHub Markdown-Formatierung ignorieren (oder escapen), indem Sie vor dem Markdown-Zeichen verwenden <kbd>\\</kbd> .
+
+`Let's rename \*our-new-project\* to \*our-old-project\*.`
+
+![Screenshot des gerenderten GitHub Markdown, der zeigt, wie umgekehrte Schrägstriche die Konvertierung von Sternchen in Kursiv verhindern.](/assets/images/help/writing/escaped-character-rendered.png)
+
+Weitere Informationen zu umgekehrten Schrägstrichen finden Sie unter Daring Fireballs [Markdown-Syntax](https://daringfireball.net/projects/markdown/syntax#backslash).
+
+> [!NOTE]
+> Die Markdown-Formatierung wird im Titel eines Problems oder eines Pull-Requests nicht ignoriert.
+
+## Deaktivieren des Markdown-Renderings
+
+Beim Anzeigen einer Markdowndatei kannst du oben in der Datei auf **Code** klicken, um das Rendering von Markdown zu deaktivieren und stattdessen den Quelltext der Datei anzuzeigen.
+
+![Screenshot einer Markdowndatei in einem Repository, auf dem Optionen für die Interaktion mit der Datei zu sehen sind. Eine Schaltfläche mit der Bezeichnung „Code“ ist dunkelorange umrandet.](/assets/images/help/writing/display-markdown-as-source-global-nav-update.png)
+
+Durch das Deaktivieren des Markdownrenderings kannst du die Funktionen der Quellenansicht nutzen, wie z. B. Zeilenverknüpfungen, die beim Anzeigen von gerenderten Markdowndateien nicht verfügbar sind.
+
+## Weiterführende Lektüre
+
+* [
+  GitHub Aromatisierte Markdown-Spezifikation](https://github.github.com/gfm/)
+* [Informationen zum Schreiben und Formatieren auf GitHub](/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github)
+* [Mit erweiterter Formatierung arbeiten](/de/get-started/writing-on-github/working-with-advanced-formatting)
+* [Schnellstart zum Schreiben auf GitHub](/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github)
